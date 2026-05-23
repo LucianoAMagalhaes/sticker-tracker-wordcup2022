@@ -165,6 +165,7 @@ function computeOverviewStats() {
   let duplicate = 0;
   let total = 0;
   for (const section of sectionsIndex.values()) {
+    if (!section.stickers) continue;
     for (const sticker of section.stickers) {
       total++;
       const status = getStatus(sticker.id);
